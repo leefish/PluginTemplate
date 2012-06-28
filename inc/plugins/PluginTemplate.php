@@ -17,6 +17,13 @@ if (!defined('IN_MYBB'))
     die('Direct initialization of this file is not allowed.<br /><br />Please make sure IN_MYBB is defined.');
 }
 
+/**
+ * Information function
+ *
+ * Returns information about the plugin to be displayed on the plugin listing page
+ *
+ * @return Array
+ */
 public function PluginTemplate_info()
 {
     global $lang;
@@ -36,5 +43,48 @@ public function PluginTemplate_info()
         'guid'          =>  '',
         'compatibility' =>  '16*',
         );
+}
+
+
+/**
+ * Installation function
+ *
+ * Performs actions on installation. Recommended to add new tables and make table modifications here.
+ *
+ * @return null
+ */
+public function PluginTemplate_install()
+{
+    global $db, $mybb;
+
+    // Installation procedure
+}
+
+/**
+ * Installation check function
+ *
+ * Check to see if the plugin is installed
+ *
+ * @return bool - true if installed, false if not.
+ */
+public function PluginTemplate_is_installed()
+{
+    global $db, $mybb;
+
+    // Installation procedure
+}
+
+/**
+ * UnInstallation function
+ *
+ * Performs actions on uninstallation. Revert any changes made in PluginTemplate_install().
+ *
+ * @return null
+ */
+public function PluginTemplate_uninstall()
+{
+    global $db, $mybb;
+
+    // Installation procedure
 }
  ?>
