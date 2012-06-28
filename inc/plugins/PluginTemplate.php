@@ -71,7 +71,7 @@ public function PluginTemplate_is_installed()
 {
     global $db, $mybb;
 
-    // Installation procedure
+    // Check if installed - generally see if a table exists and return true if it does
 }
 
 /**
@@ -85,6 +85,40 @@ public function PluginTemplate_uninstall()
 {
     global $db, $mybb;
 
-    // Installation procedure
+    // UnInstallation procedure
+}
+
+/**
+ * Activation function
+ *
+ * Performs actions on activation.
+ *
+ * @return null
+ */
+public function PluginTemplate_activate()
+{
+    global $db, $mybb;
+
+    // Activation procedure
+}
+
+/**
+ * DeActivation function
+ *
+ * Performs actions on deactivation.
+ *
+ * @return null
+ */
+public function PluginTemplate_deactivate()
+{
+    global $db, $mybb;
+
+    // DeActivation procedure
+}
+
+$plugins->add_hook('index_start', 'PluginTemplate_index_start');
+public function PluginTemplate_index_start()
+{
+    echo "PluginTemplate!";
 }
  ?>
