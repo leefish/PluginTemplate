@@ -24,7 +24,7 @@ if (!defined('IN_MYBB'))
  *
  * @return Array
  */
-public function PluginTemplate_info()
+function PluginTemplate_info()
 {
     global $lang;
 
@@ -53,7 +53,7 @@ public function PluginTemplate_info()
  *
  * @return null
  */
-public function PluginTemplate_install()
+function PluginTemplate_install()
 {
     global $db, $mybb;
 
@@ -67,7 +67,7 @@ public function PluginTemplate_install()
  *
  * @return bool - true if installed, false if not.
  */
-public function PluginTemplate_is_installed()
+function PluginTemplate_is_installed()
 {
     global $db, $mybb;
 
@@ -81,7 +81,7 @@ public function PluginTemplate_is_installed()
  *
  * @return null
  */
-public function PluginTemplate_uninstall()
+function PluginTemplate_uninstall()
 {
     global $db, $mybb;
 
@@ -95,7 +95,7 @@ public function PluginTemplate_uninstall()
  *
  * @return null
  */
-public function PluginTemplate_activate()
+function PluginTemplate_activate()
 {
     global $db, $mybb;
 
@@ -109,7 +109,7 @@ public function PluginTemplate_activate()
  *
  * @return null
  */
-public function PluginTemplate_deactivate()
+function PluginTemplate_deactivate()
 {
     global $db, $mybb;
 
@@ -117,7 +117,7 @@ public function PluginTemplate_deactivate()
 }
 
 $plugins->add_hook('index_start', 'PluginTemplate_index_start');
-public function PluginTemplate_index_start()
+function PluginTemplate_index_start()
 {
     echo "PluginTemplate!";
 }
